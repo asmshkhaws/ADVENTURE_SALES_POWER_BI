@@ -19,38 +19,15 @@ The Adventure Works Dashboard is designed to show the business insights for Sale
 # STEPS:
 ### 1. Connecting & Shaping Data with Power BI Desktop
 
-- Step 1 : Open power query editor Load data folder into Power BI Desktop, datasets are csv files.
-- Step 2 : Rename query to "Source" and uncheck "Enable Load" for this query.
-- Step 3 : Now "Reference" the Source query and connect the "Dates" Table, filter 1st column(Date) for (>=2022) as dates in sales table are (>=2022).
-- Step 4 : Similarly "Reference" the "Source" query and connect the "Inventory, Products, Sales, Stores" Tables.
-- Step 5 : Goto Sales
-
-    Merge Queries -- Select Products from drawdown -- select "Product_ID" in both tables (Join kind: Left Outer) -- OK
-        
-    From Products just add columns "Product_Cost", "Product_Price" to Sales Table.  
-- Step 6 : Create 3 new columns: 
-
-        "Total_Cost"    (Units * Product_Cost)
-        "Total_Revenue" (Units * Product_Price)
-        "Total_Profit"  (Total_Revenue - Total_Cost)
-        
-    Remove column "Product_Cost" & "Product_Price" from Sales Table.
-- Step 7 : Close & Apply Power Query Editor.
-- Step 8 : Goto Model View, Power BI was intelligent enough to create relationship between tables based on common items. However Dates and Sales table are not connected, so create relationship by dragging date from Sales table and drop it on Dates Table.
+The raw data set came in .csv format and was imported to Power BI directly. A total of 8 files were imported, each being their own table. Here I was able to get a general overview of the data set and saw that I would primarily be working with Sales and Returns data. I then began cleaning the data by ensuring columns were titled appropriately, they were in their correct data types, looking for missing data (which there was none) and began looking for what relationships I might be able to create between these tables.
 
 
 ### 2. Creating Table Relationships & Data Models in Power BI.
 
-- Step 1 : In this project we have created separate tables for DAX Measure.
-- Step 2 : Home -- Enter Data -- Name (_Measures_01) -- Load.
-- Step 3 : Create New Measures
-```
-        Cost = SUM(Sales[Total Cost])
-        Profit = SUM(Sales[Total Profit])
-        Revenue = SUM(Sales[Total Revenue])
-        Units = SUM(Sales[Units])
-```
-- Step 4 : Hide column01
+After ensuring my data’s accuracy and consistency, I began the process of creating a data model for my tables. I first established my data tables which are ‘Sales Data’ and ‘Returns Data’ then set work creating relationships between tables. For this project I did not find it necessary to use any relationships other than one to many. A picture of the completed model is provided for greater understanding.
+
+![Model View](https://github.com/asmshkhaws/ADVENTURE_SALES_POWER_BI/assets/119579424/3fbdc523-aa62-4d71-831d-b37187ab5339)
+
 
 
 ### 3. Analyzing Data with DAX Calculations in Power BI
