@@ -17,7 +17,7 @@ The Adventure Works Dashboard is designed to show the business insights for Sale
 
 
 # STEPS:
-### 1. Steps for Modelling the Datasets
+### 1. Connecting & Shaping Data with Power BI Desktop
 
 - Step 1 : Open power query editor Load data folder into Power BI Desktop, datasets are csv files.
 - Step 2 : Rename query to "Source" and uncheck "Enable Load" for this query.
@@ -39,7 +39,7 @@ The Adventure Works Dashboard is designed to show the business insights for Sale
 - Step 8 : Goto Model View, Power BI was intelligent enough to create relationship between tables based on common items. However Dates and Sales table are not connected, so create relationship by dragging date from Sales table and drop it on Dates Table.
 
 
-### 2. Steps for Building Our DAX Measure Table (_Measures_01).
+### 2. Creating Table Relationships & Data Models in Power BI.
 
 - Step 1 : In this project we have created separate tables for DAX Measure.
 - Step 2 : Home -- Enter Data -- Name (_Measures_01) -- Load.
@@ -53,7 +53,7 @@ The Adventure Works Dashboard is designed to show the business insights for Sale
 - Step 4 : Hide column01
 
 
-### 3. Steps for Building a Sales Performance Page
+### 3. Analyzing Data with DAX Calculations in Power BI
            
 - Step 1 : Add Cards for displaying YTD Revenue & Previous YTD Revenue:
             
@@ -121,7 +121,7 @@ The Adventure Works Dashboard is designed to show the business insights for Sale
     (c) Bar Chart (YOY Difference vs Store Location): [X-Axis: YOY Difference], [Y-Axis: Store Location]
 
 At Last format complete page for colours and gradients accordingly
-### 4. Steps for Building a Product Performance Page
+### 4. Visualizing Data with Power BI Reports
            
 - Step 1 : Add Stacked Bar Chart (YTD Revenue by Product)
             
